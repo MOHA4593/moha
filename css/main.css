@@ -13,13 +13,22 @@ body{
     height: 100vh;
 }
 
+.container{
+    padding: 1% 8%;
+}
+
+a{
+    text-decoration: none;
+}
+
 
 h1{
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bolder;
     font-size: 2.8rem;
-    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 1%;
 }
 
 h3{
@@ -28,6 +37,15 @@ h3{
     font-weight: lighter;
     font-size: 1rem;
     letter-spacing: 2.5px;
+}
+
+p{
+    color: rgb(187, 187, 187);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder; 
+    letter-spacing: 2.5px;
+    padding: 0;
+    margin: 0;
 }
 
 span{
@@ -57,48 +75,53 @@ span{
     color: #858585;
 }
 
-p{
-    color: rgb(187, 187, 187);
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bolder; 
-}
-
 .btn{
-   background-color: transparent;
-   text-transform: uppercase;
+    max-width: 2000px;
+    height: 45px;
+    color: white;
+    padding: 0 15px;
+    background-color: transparent;
+    border-radius: 45px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0px auto -80px;
 }
 
 .btn:hover{
-    box-shadow: 0px 2px 8px red;
+    border: 1px solid #60b0f4;
 }
 
 .navbar-brand{
-    width: 175px;
+    width: 200px;
 }
 
 .navbar-light .navbar-nav .nav-link.active{
-    color: white;
-    padding: 0 20px;
+    color: rgb(228, 220, 220);
+    padding: 8px 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
 }
+
 .navbar-light .navbar-nav .nav-link.active:hover{
-    color: rgb(243, 210, 210);
+    color: rgb(255, 255, 255);
     background: #153552;
+    border-radius: 12px;
+    border-bottom: 3px solid #60b0f4;
 }
 
 span.navbar-toggler-icon{
-    color:  red !important;
     background-color: #60b0f4;
 }
 
 span.navbar-toggler-icon:hover{
-    background-color: white;
+    background-color: #60b0f4;
 }
 
 .row{
     border-left: thick double #60b0f4;
-    margin-top: 5%;
     animation: transtitionIn 1.5s ease-in;
 }
+
 
 @keyframes transtitionIn {
     from{
@@ -117,17 +140,27 @@ span.navbar-toggler-icon:hover{
     border: 40px solid rgb(179, 179, 179);
 }
 
+.contact-img{
+    width: 75%;
+    border-radius: 50%;
+    border: 40px solid rgb(179, 179, 179);
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 40px solid rgb(179, 179, 179);
+}
+
 .left-col{
     margin: 17% 0 0%;
 }
 
 .right{
     padding-left: 10%;
+    align-items: center;
 }
 
 footer{
     background-color: rgb(63, 115, 160);
-    margin-top: 4%;
+    margin-top: 8%;
     padding: 30px 0;
     text-align: center;
     border-bottom-left-radius: 250px;
@@ -176,12 +209,89 @@ footer{
     animation: transtitionIn 1.5s ease-in;
 }
 
+.contact-form {
+    border-radius: 12px;
+    padding: 50px 50px 100px;
+    background-color: #151515;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0 40px 50px -55px #f4ea60;
+}
+
+.contact-form input{
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    height: 40px;
+    padding: 15px;
+    background: #213b52;
+    color: white;
+    transition: 0.5s;
+}
+
+.contact-left-col{
+    margin: 8% 0 0%;
+}
+
+.contact-right{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.contact-form input:focus{
+    outline: none;
+    box-shadow: 0 10px 30px -20px #7e8181;
+    filter: contrast(85%);
+}
+
+.contact-form input.subscribe{
+    margin-top: 60px;
+}
+
+.contact-form label{
+    color: white;
+    font-weight: bolder;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.label:after {
+    content:" *";
+    color: red;
+  }
+
+.contact-form .subscribe{
+    max-width: 150px;
+    height: 45px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid #60b0f4;
+    border-radius: 45px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0px auto -80px;
+}
+
+.contact-form .subscribe:hover{
+    color: black;
+    background-color: #60b0f4;
+}
+
 
 /* MEDIA FOR MOBILES */
 
 @media only screen and (max-width: 486px) {
     H1 {
       font-size: 2rem;
+    }
+    .navbar-brand{
+        width: 150px;
+    }
+    .container{
+        padding: 0;
     }
     .social-links a{
         font-size: 1.75rem;
@@ -194,8 +304,20 @@ footer{
     }
   }
 
+  /* MEDIA FOR tablets */
+
   @media only screen and (max-width: 768px) {
     footer {
         margin-top: 100px;
     }
+    .right{
+        margin: 50px auto 0 ;
+    }
+    .contact-img{
+        width: 100%;
+        margin-top: 50px;
+        border-radius: 50%;
+        border: 40px solid rgb(179, 179, 179);
+    }
   }
+
